@@ -12,7 +12,7 @@ const chatBot = (client) => {
             break;
         case '!help':
             try {
-                client.say(channel, `Liste des commandes disponnible : !hello, !discord, !steam, !youtube`);
+                client.say(channel, `Liste des commandes disponnible : !hello, !discord, !steam, !youtube, !ping`);
             }
             catch (err) {
                 console.log("error : " + err);
@@ -20,7 +20,7 @@ const chatBot = (client) => {
             break;
         case '!discord':
             try {
-                client.say(channel, `@${user.username}, https://www.youtube.com/channel/UCvZK1Y8m2JvF5bJ8wJ7j9gA`);
+                client.say(channel, `@${user.username}, https://discord.gg/J6Kw9mG`);
             }
             catch (err) {
                 console.log("error : " + err);
@@ -37,6 +37,14 @@ const chatBot = (client) => {
         case '!youtube':
             try {
                 client.say(channel, `@${user.username}, https://www.youtube.com/channel/UC4qimk1HOCPGc6sFSNalwzA `);
+            }
+            catch (err) {
+                console.log(err);
+            }
+            break;
+        case '!ping':
+            try {
+                client.say(channel, `@${user.username}, pong!`);
             }
             catch (err) {
                 console.log(err);
