@@ -1,13 +1,11 @@
 import tmi from 'tmi.js';
 import dotenv from 'dotenv';
-dotenv.config();
 
+dotenv.config();
 const { TWITCH_USERNAME, TWITCH_OAUTH } = process.env;
 
 // Controllers :
 import chatBot from './controllers/chat.js';
-import ban from './controllers/ban.js';
-import timeout from './controllers/timeout.js';
 
 const options = {
     options: {   
@@ -28,4 +26,5 @@ const client = new tmi.Client(options);
 client.connect().then(() => {
     client.say('NkStreamTV', ' nkTwitchBot est connecté');
 });
+
 chatBot(client);
