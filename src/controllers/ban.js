@@ -1,4 +1,4 @@
-exports.ban = (req, res, next) => {
+const ban = (req, res, next) => {
     client.on('ban', (channel, username, reason) => {
         if(reason === null) {
             reason = "Bien mérité !";
@@ -7,3 +7,5 @@ exports.ban = (req, res, next) => {
         client.ban(channel, username);
     });
 };
+
+export default ban;

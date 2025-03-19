@@ -2,14 +2,16 @@
   "name": "essai",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index",
+    "start": "nodemon src/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Le Bot de NkStreamTV",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "nodemon": "^3.1.9",
     "tmi.js": "^1.8.5"
   }

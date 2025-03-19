@@ -1,4 +1,4 @@
-exports.ban = (req, res, next) => {
+const timeout = (req, res, next) => {
     client.on('timeout', (channel, username, reason, duration) => {
         if(reason === null) {
             reason = "Bien mérité !";
@@ -7,3 +7,5 @@ exports.ban = (req, res, next) => {
         client.timeout(channel, username);
     });
 };
+
+export default timeout;
