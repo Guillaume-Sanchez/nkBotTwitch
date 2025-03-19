@@ -3,8 +3,8 @@ Le Bot de NkStreamTV
 
 ## Objectifs
 
-- [ ] Ce connecter au chat de NkStreamTv
-- [ ] Détécter les commandes des viewrs
+- [x] Ce connecter au chat de NkStreamTv
+- [x] Détécter les commandes des viewrs
 - [ ] Détécter "wow" pour lacher un son "WOW"
 - [ ] Modérer la chaine twitch de NkStreamTV
 
