@@ -16,8 +16,8 @@ Le Bot de NkStreamTV
 ### Languages & Framework
 
 - javascript 
-[Link here]([https://www.php.net/](https://developer.mozilla.org/fr/docs/Web/JavaScript))
+[Link here](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - node.Js
 [Link here](https://nodejs.org/fr)
 - tmi.js
-[Link here]([https://nodejs.org/fr](https://tmijs.com/))
+[Link here](https://tmijs.com/)
