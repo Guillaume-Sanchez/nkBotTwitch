@@ -1,4 +1,6 @@
-const chatBot = (client) => {
+import { client } from '../../server.js';
+
+const chatBot = () => {
     client.on('chat', (channel, user, message, self) => {
     if (self) return;
     switch (message) { 

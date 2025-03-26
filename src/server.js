@@ -7,6 +7,7 @@ import tmi from 'tmi.js';
 
 // Controllers :
 import chatBot from './controllers/twitch/chat.js';
+import autoMessage from './controllers/twitch/autoMessage.js';
 import checkStreamStatus from './controllers/twitch/status.js';
 
 const options = {
@@ -24,17 +25,15 @@ const options = {
     channels: ['NkStreamTV'],
 };
 
-const client = new tmi.Client(options);
-client.connect().then(() => {
-    //client.say('NkStreamTV', ' nkTwitchBot est connecté');
-});
+export const client = new tmi.Client(options);
+client.connect().catch(console.error);
 
-chatBot(client);
+chatBot();
+setInterval(autoMessage, 600000);
 
 // ===== Discord : =====
 
 import {Client, GatewayIntentBits} from 'discord.js';
-
 // Controllers :
 
 import commands from './controllers/discord/commands.js';

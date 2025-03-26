@@ -4,14 +4,13 @@ const commands = (client) => {
             switch (message.content) {
                 case '!help':
                     message.reply(
-                        `Voici la liste de toutes les commandes disponibles :
-                            !help : Affiche la liste des commandes disponibles'
-                            !ping : Répond pong
-                            !twitch : Donne le lien de la chaîne Twitch de NkStreamTV
-                            !youtube : Donne le lien de la chaîne Youtube de NkStreamTV
-                            !discord : Donne le lien du serveur Discord de NkStreamTV
-                            !steam : Donne le lien du groupe Steam de NkStreamTV
-                        `);
+`Voici la liste de toutes les commandes disponibles :
+* !help : Affiche la liste des commandes disponibles 🆘
+* !ping : Répond pong 🏓
+* !twitch : Donne le lien de la chaîne Twitch de NkStreamTV 🎮
+* !youtube : Donne le lien de la chaîne Youtube de NkStreamTV 📺
+* !discord : Donne le lien du serveur Discord de NkStreamTV 🎧
+* !steam : Donne le lien du groupe Steam de NkStreamTV 🎲`);
                     break;
                 case '!ping':
                     message.reply('pong');
