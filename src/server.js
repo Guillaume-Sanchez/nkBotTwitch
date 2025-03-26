@@ -29,7 +29,7 @@ export const client = new tmi.Client(options);
 client.connect().catch(console.error);
 
 chatBot();
-setInterval(autoMessage, 600000);
+setInterval(autoMessage, 1200000);
 
 // ===== Discord : =====
 
@@ -66,14 +66,9 @@ clientDiscord.once('ready', () => {
 //        });
 //    });
 });
-
 commands(clientDiscord);
-
 // Status (Mélangé avec Discord et Twitch)
-
-// Passage de la fonction checkStreamStatus dans un setInterval pour vérifier toutes les minutes si le stream est en ligne ou non.
-// wrapperCheckStreamStatus permet de rendre la fonction asycrone pour éviter les erreurs de promesse non résolue.
-const wrapperCheckStreamStatus = () =>{
-    checkStreamStatus(TWITCH_CHANNEL_NAME, TWITCH_CHANNEL_CLIENT_ID, TWITCH_CHANNEL_TOKEN)
+const wrapperCheckStreamStatus = () =>{ // Passage de la fonction checkStreamStatus dans un setInterval pour vérifier toutes les minutes si le stream est en ligne ou non.
+    checkStreamStatus(TWITCH_CHANNEL_NAME, TWITCH_CHANNEL_CLIENT_ID, TWITCH_CHANNEL_TOKEN) // wrapperCheckStreamStatus permet de rendre la fonction asycrone pour éviter les erreurs de promesse non résolue.
 }
 setInterval(wrapperCheckStreamStatus, 60000);
