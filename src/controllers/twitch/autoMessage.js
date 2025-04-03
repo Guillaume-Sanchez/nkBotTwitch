@@ -17,7 +17,7 @@ const autoMessage = () => {
     const randomIndex = Math.floor(Math.random() * messages.length);
 
     client.say(
-        messages[randomIndex]
+        "NkStreamTV", messages[randomIndex]
     );
 };
 
